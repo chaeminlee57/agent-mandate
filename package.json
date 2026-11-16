@@ -1,0 +1,29 @@
+{
+  "name": "agent-mandate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Verified humans behind AI agents: scoped, key-bound, revocable mandates on top of an ID.me login.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node --no-warnings scripts/dev.ts",
+    "demo": "node --no-warnings scripts/demo.ts",
+    "mcp": "node --no-warnings packages/mcp/server.ts",
+    "test": "node --no-warnings --test test/verifier.test.ts",
+    "e2e": "node --no-warnings test/e2e.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.8",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@simplewebauthn/browser": "^14.0.0",
+    "@simplewebauthn/server": "^14.1.0",
+    "hono": "^4.13.18",
+    "jose": "^6.2.17",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}
